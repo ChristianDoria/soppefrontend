@@ -1,0 +1,96 @@
+.imagen-background {
+  background-image: url("../../img/ipad.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+.div-content {
+  padding: 39px 7px 35px 7px;
+  background: rgba(255,255,255,0.83);
+  display: inline-block;
+}
+.soppe {
+  font-family: 'Raleway', sans-serif;
+  margin-left: 2em;
+  margin-top: 0;
+  padding-top: 0.6em;
+}
+.HeaderAbout-Descripcion-p {
+  font-size: 1.5em;
+  margin: 0;
+  margin-left: 2.5em;
+  display: inline-block;
+  width: 58%;
+}
+.HeaderAbout-Descripcion-slogang {
+  font-size: 2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  margin-left: 2em;
+  display: inline-block;
+}
+#container-main {
+  margin: 40px auto;
+  width: 95%;
+  min-width: 320px;
+  max-width: 960px;
+}
+#container-main h1 {
+  font-size: 40px;
+  text-shadow: 4px 4px 5px #fff;
+}
+.accordion-container {
+  width: 100%;
+  margin: 0 0 20px;
+  clear: both;
+}
+.accordion-titulo {
+  position: relative;
+  display: block;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 300;
+  background: #6a1b9a;
+  color: #fff;
+  text-decoration: none;
+}
+.accordion-titulo.open {
+  background: #64b5f6;
+  color: #fff;
+}
+.accordion-titulo:hover {
+  background: #64b5f6;
+}
+.accordion-titulo span.toggle-icon:before {
+  content: "+";
+}
+.accordion-titulo.open span.toggle-icon:before {
+  content: "-";
+}
+.accordion-titulo span.toggle-icon {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 38px;
+  font-weight: bold;
+}
+.accordion-content {
+  display: none;
+  padding: 20px;
+  overflow: auto;
+}
+.accordion-content p {
+  margin: 0;
+  font-size: 1.8em;
+}
+.accordion-content img {
+  display: block;
+  float: left;
+  margin: 0 15px 10px 0;
+  width: 50%;
+  height: auto;
+}
+@media (max-width: 767px) {
+  .accordion-content {
+    padding: 10px 0;
+  }
+}

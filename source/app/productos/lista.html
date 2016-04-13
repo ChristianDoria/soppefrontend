@@ -1,0 +1,14 @@
+<a href="#/productos/create">CREAR productos</a>
+
+<h4>LISTADO DE productos</h4>
+<div ng-repeat="producto in vm.productos">
+<h6>ID: {{producto.idProducto}}</h6>
+<h6>NOMBRE: {{productos.descripcion}}</h6>
+</div>
+
+<div class="form-group">
+            <label>Buscar Productos</label>
+            <input type="text" ng-model="vm.busqueda" class="form-control" placeholder="Buscar">
+        </div>
+    </form>
+</div>

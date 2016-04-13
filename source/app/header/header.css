@@ -1,0 +1,45 @@
+.menu {
+  background: #b0c4de;
+  text-align: center;
+  font-size: 1.5em;
+}
+.li1 {
+  padding: 1em;
+  display: inline-block;
+}
+.ini {
+align-left
+  display: inline-block;
+}
+.navbar-soppe {
+  background: #6a1b9a;
+  border-color: #6a1b9a;
+  color: #fff;
+  border-radius: 0px;
+}
+.navbar-soppe-titulo {
+  color: #f00;
+}
+.navbar-soppe-titulo:hover {
+  color: #fff;
+}
+.icon-headerMenu,
+.icon-headerMenu-verde {
+  margin-right: 3px;
+  padding: 8px;
+  background: #0d47a1;
+  border-radius: 100%;
+  box-shadow: 2px 1px 19px -4px #000;
+}
+.mainmenu-titulo:hover {
+  background: #0277bd;
+}
+.MainMenuIten:hover {
+  background: #0277bd;
+}
+.icon-headerMenu-verde {
+  background: #1b5e20;
+}
+.soppe-verde:hover {
+  background: #2e7d32;
+}
