@@ -3,38 +3,28 @@
 
     angular.module('app.productos.directivas', [
 
-    ]).directive('productoslist', productosList)
-    .directive('productoscreate',productosCreate)
-    .directive('productosupdate',productosUpdate);
+    ]).directive('productos', productos);
+  //  .directive('productoslist', productosList);
 
-
-    function productosList() {
+    function productos() {
         return {
             scope: {},
             restrict: 'EA',
-            templateUrl: 'app/productos/lista.html',
-            controller: 'productosListCtrl',
-            controllerAs: 'vm'
-        }
-    }
-
-    function productosCreate() {
-        return {
-            scope: {},
-            restrict: 'EA',
-            templateUrl: 'app/productos/create.html',
+            templateUrl: 'app/productos/productos.html',
             controller: 'productosCreateCtrl',
             controllerAs: 'vm'
         }
     }
 
-      function productosUpdate() {
-        return {
-            scope: {},
-            restrict: 'EA',
-            templateUrl: 'app/productos/create.html',
-            controller: 'productosUpdateCtrl',
-            controllerAs: 'vm'
-        }
-    }
+//     function productosList() {
+//   return {
+//     scope:{},
+//     restrict: 'EA',
+//     templateUrl:'app/productos/list.html',
+//     controller:'productosListCtrl',
+//     controllerAs:'vm'
+//   }
+// }
+
+
 })();

@@ -5,14 +5,18 @@
   ]).controller('tercerosCreateCtrl', tercerosCreateCtrl);
 
 
-  tercerosCreateCtrl.$inject = ['$location' ,'Terceros'];
-  function tercerosCreateCtrl($location, Terceros){
+  tercerosCreateCtrl.$inject = ['$mdToast', '$location' ,'Terceros'];
+  function tercerosCreateCtrl($mdToast, $location, Terceros){
 
     var vm=this;
 
     vm.create=function(){
         Terceros.save(vm.tercero);
-        $location.url('/');
+        $location.url('/registroEmpresa');
+        $mdToast.show(
+          $mdToast.simple()
+          .textContent('Usuario Registrado...')
+          .position('bottom right'));
 
     }
 

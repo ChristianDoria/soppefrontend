@@ -1,109 +1,110 @@
 <html lang="es">
 
-<nav style="margin: 0;"class="navbar navbar-default navbar-soppe">
+
+
+
+<nav class="navbar navbar-default navbar-soppe">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">SOPPE</span>
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-   <a class="navbar-brand navbar-soppe-titulo mainmenu-titulo" href="#">SOPPE</a>
+      <a class="navbar-brand navbar-soppe-titulo mainmenu-titulo" href="#">SOPPE</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-      <!--  <li class="MainMenuIten"><a href="#"><span class="icon-home2 icon-headerMenu"></span>Inicio</a></li>-->
-        <!--   <li class="MainMenuIten"><a href="#/productos"><span class="icon-shopping_cart icon-headerMenu"></span>Productos</a></li>-->
-        <!--   <li class="MainMenuIten"><a href="#"><span class="icon-local_offer icon-headerMenu"></span>ventas</a></li>-->
-    <!--    <li class="soppe-verde"><a href="#"><span class="icon-leaf icon-headerMenu-verde"></span>soppe ecologico</a></li>-->
-      <li class="dropdown MainMenuIten">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon-archive icon-headerMenu"></span>Modulos <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li class="MainMenuIten"><a href="#"><span class="icon-local_offer icon-headerMenu"></span>ventas</a></li>
-            <li role="separator" class="divider"></li>
-          <li class="MainMenuIten"><a href="#/productos"><span class="icon-shopping_cart icon-headerMenu"></span>productos</a></li>
-        </ul>
-      </li>
-        <li class="dropdown MainMenuIten">
-          <a href="#/portafolio" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon-suitcase icon-headerMenu"></span>Portafolio de servivios <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#/portafolio">¿Quienes somos?</a></li>
-              <li role="separator" class="divider"></li>
-            <li><a href="#">Mision</a></li>
-              <li role="separator" class="divider"></li>
-            <li><a href="#">Vision</a></li>
+        <li class="MainMenuIten" ng-show="vm.isAuthenticated()" ><a href="#/moduloVentas" ><span class="icon-view_week icon-headerMenu"></span>modulos</a></li>
+          <li class="dropdown MainMenuIten" >
+            <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon-help icon-headerMenu"></span>Portafolio de servivios <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="MainMenuIten" ><a href="#/portafolio"><span class="icon-info-with-circle icon-headerMenu"></span>¿Quienes somos?</a></li>
+                <li role="separator" class="divider"></li>
+              <li class="MainMenuIten"><a href="#"><span class="icon-info-with-circle icon-headerMenu"></span>Mision</a></li>
+                <li role="separator" class="divider"></li>
+              <li class="MainMenuIten"><a href="#"><span class="icon-info-with-circle icon-headerMenu"></span>Vision</a></li>
 
-          </ul>
-        </li>
+            </ul>
+          </li>
+          <li class="MainMenuIten" ng-show="vm.isAuthenticated()" ><a href="#/productos" ><span class="icon-local_offer icon-headerMenu"></span>producto</a></li>
+
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown MainMenuIten" ng-show="vm.isAuthenticated()" >
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon-cog icon-headerMenu"></span> <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                  <li class="MainMenuIten"  ng-show="vm.isAuthenticated()" ><a href="#/registroEmpresa" ><span class="icon-person_add icon-headerMenu"></span>registroEmpresa</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li class="MainMenuIten" ng-show="vm.isAuthenticated()"  ><a href="#/registroSede" ><span class="icon-person_add icon-headerMenu"></span>registroSede</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li class="MainMenuIten"  ng-show="vm.isAuthenticated()" ><a href="#/empresasRegistradas" ><span class="icon-person_add icon-headerMenu"></span>Empresas Registradas</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li class="MainMenuIten"  ng-show="vm.isAuthenticated()" ><a href="#/sedesRegistradas" ><span class="icon-person_add icon-headerMenu"></span>Sedes Registradas</a></li>
+                    </ul>
 
-        <li class="dropdown MainMenuIten">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon-account_circle icon-headerMenu"></span>inicio de sesion <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">usuario</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">contraseña</a></li>
+                </li>
+
+      <form name="loginForm"
+                   class="navbar-form navbar-right"
+                   role="Username"
+                   ng-hide="vm.isAuthenticated()"
+                   ng-submit="vm.signIn()"
+                   novalidate>
+            <div class="form-group">
+              <input type="email"
+                     class="form-control"
+                     placeholder="Email"
+                     required
+                     ng-model="vm.user.email"/>
+            </div>
+
+            <div class="form-group">
+              <input type="password"
+                     class="form-control"
+                     placeholder="Password"
+                     required
+                     ng-model="vm.user.password"/>
+
+            </div>
+              <button type="submit"
+                      ng-disable="loginForm.$invalid"
+                      class="btn btn-default ingresar">Ingresar</button>
+
+          </form>
+
+          <ul class="nav navbar-nav navbar-right "
+               ng-show="vm.isAuthenticated()" >
+
+            <li class="dropdown MainMenuIten ">
+
+             <a href=""
+                class="MainMenuIten "
+                 class="dropdown-toggle"
+                 data-toggle="dropdown"
+                 role="button"
+                 aria-haspopuo="true"
+                 aria-expanded="false">{{vm.getCurrentUser()}}
+                 <span class="caret"></span>
+               </a>
+
+               <ul class="dropdown-menu">
+                 <li><a ng-click="vm.logout()">Cerrar Sesión</a></li>
+               </ul>
+
+            </li>
 
           </ul>
-        </li>
-          <li class="MainMenuIten" ><a href="#/registro" ><span class="icon-person_add icon-headerMenu"></span>Registrate!</a></li>
+
+            <li class="MainMenuIten" ng-show="!vm.isAuthenticated()"><a href="#/registro" ><span class="icon-person_add icon-headerMenu"></span>Registrate!</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
-  </div>
-  <form name="loginForm"
-           class="navbar-form navbar-right"
-           role="Username"
-           ng-hide="vm.isAuthenticated()"
-           ng-submit="vm.signIn()"
-           novalidate>
-    <div class="form-group">
-      <input type="email"
-             class="form-control"
-             placeholder="Email"
-             required
-             ng-model="vm.user.email"/>
-    </div>
-
-    <div class="form-group">
-      <input type="password"
-             class="form-control"
-             placeholder="Password"
-             required
-             ng-model="vm.user.password"/>
-
-    </div>
-      <button type="submit"
-              ng-disable="loginForm.$invalid"
-              class="btn btn-default ingresar">Ingresar</button>
-
-  </form>
-
-  <ul class="nav navbar-nav navbar-right"
-       ng-show="vm.isAuthenticated()"
-      >
-    <li class="dropdown">
-      <a href="#"
-         class="dropdown-toggle"
-         data-toggle="dropdown"
-         role="button"
-         aria-haspopuo="true"
-         aria-expanded="false">{{vm.getCurrentUser()}}
-         <span class="caret"></span>
-       </a>
-       <ul class="dropdown-menu">
-         <li><a ng-click="vm.logout()">Cerrar Sesión</a></li>
-       </ul>
-
-    </li>
-
-  </ul>
-<!-- /.container-fluid -->
+  </div><!-- /.container-fluid -->
 </nav>
 
 </html>

@@ -18,9 +18,8 @@
     function signIn(){
     $auth.login(vm.user)
         .then(function(){
-          console.log("aqui");
           vm.user = {};
-          $location.path('/');
+          $location.path('/moduloVentas');
           $mdToast.show(
             $mdToast.simple()
             .textContent('Sesion Iniciada...')
@@ -31,6 +30,7 @@
           $mdToast.show(
             $mdToast.simple()
             .textContent(error.status + ' ' + error.data)
+            .textContent('usuario invalido...')
             .position('bottom right'));
         });
     }

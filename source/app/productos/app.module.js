@@ -5,7 +5,7 @@
         'app.productos.controller',
         'app.productos.services',
         'app.productos.router',
-        'app.productos.directivas',
+        'app.productos.directivas'
 
     ]);
 

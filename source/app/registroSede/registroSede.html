@@ -1,0 +1,42 @@
+<h1>REGISTRO SEDE</h1>
+<div class="contenedor-formulario">
+  <div class="wrap">
+    <div layout="column" ng-cloak>
+         <md-content layout-padding>
+ 			<form action="" class="formulario" name="formulario_registro" method="get">
+
+
+ 				<div>
+ 						<md-input-container class="md-block">
+ 	 												 <label>Dirección</label>
+ 	 												 <input md-maxlength="40" required md-no-asterisk name="nombre" ng-model="vm.sede.direccion">
+ 	 												 <div ng-messages="formulario_registro.nombre.$error">
+ 	 														 <div ng-message="md-maxlength">El nombre no puede superar 40 caracteres.</div>
+ 	 												 </div>
+ 	 					 </md-input-container>
+ 		 					<md-input-container class="md-block">
+ 		 												 <label>Teléfono</label>
+ 		 												 <input md-maxlength="40" required md-no-asterisk name="nombre" ng-model="vm.sede.telefono">
+ 		 												 <div ng-messages="formulario_registro.nombre.$error">
+ 		 														 <div ng-message="required">Este campo es requerido.</div>
+ 		 														 <div ng-message="md-maxlength">El nombre no puede superar 40 caracteres.</div>
+ 		 												 </div>
+
+ 		 					 </md-input-container>
+ 							 <md-input-container class="md-block">
+ 										 <label>Email</label>
+ 											 <input md-maxlength="40" required md-no-asterisk name="nombre" ng-model="vm.sede.email">
+ 											 <div ng-messages="formulario_registro.nombre.$error">
+ 													 <div ng-message="required">Este campo es requerido.</div>
+ 														 <div ng-message="md-maxlength">El nombre no puede superar 40 caracteres.</div>
+ 															 </div>
+  									 </md-input-container>
+ 								
+ 					<input type="button" id="btn-submit" value="Enviar" ng-click="vm.create()">
+ 				</div>
+      </form>
+      </md-content>
+      </div>
+
+      </div>
+      </div>

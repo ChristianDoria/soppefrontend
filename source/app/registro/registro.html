@@ -8,6 +8,7 @@
 	<title>Formularios</title>
 </head>
 <body>
+	<h1>REGISTRO USUARIO</h1>
 	<div class="contenedor-formulario">
 		<div class="wrap">
 			<div layout="column" ng-cloak>
@@ -49,8 +50,33 @@
 										 												 </div>
 		 					 </md-input-container>
 							 <md-input-container class="md-block">
+										 <label>Numero Documento</label>
+											 <input md-maxlength="40" required md-no-asterisk name="nombre" ng-model="vm.tercero.documento">
+											 <div ng-messages="formulario_registro.nombre.$error">
+													 <div ng-message="required">Este campo es requerido.</div>
+														 <div ng-message="md-maxlength">El nombre no puede superar 40 caracteres.</div>
+															 </div>
+										 </md-input-container>
+										 <md-input-container class="md-block">
+													 <label>Telefono</label>
+														 <input md-maxlength="40" required md-no-asterisk name="nombre" ng-model="vm.tercero.telefono">
+														 <div ng-messages="formulario_registro.nombre.$error">
+																 <div ng-message="required">Este campo es requerido.</div>
+																	 <div ng-message="md-maxlength">El nombre no puede superar 40 caracteres.</div>
+																		 </div>
+													 </md-input-container>
+													 <md-input-container class="md-block">
+																 <label>Direccion</label>
+																	 <input md-maxlength="40" required md-no-asterisk name="nombre" ng-model="vm.tercero.direccion">
+																	 <div ng-messages="formulario_registro.nombre.$error">
+																			 <div ng-message="required">Este campo es requerido.</div>
+																				 <div ng-message="md-maxlength">El nombre no puede superar 40 caracteres.</div>
+																					 </div>
+																 </md-input-container>
+
+							 <md-input-container class="md-block">
 										 <label>Email</label>
-											 <input md-maxlength="40" required md-no-asterisk name="nombre" ng-model="vm.tercero.email">
+											 <input md-maxlength="40" required md-no-asterisk name="nombre" type="email" ng-model="vm.tercero.email">
 											 <div ng-messages="formulario_registro.nombre.$error">
 													 <div ng-message="required">Este campo es requerido.</div>
 														 <div ng-message="md-maxlength">El nombre no puede superar 40 caracteres.</div>
@@ -71,6 +97,8 @@
 						<label for="hombre">Hombre</label>
 						<input type="radio" name="sexo" id="mujer" value="Mujer" ng-model="vm.tercero.sexo">
 						<label for="mujer">Mujer</label>
+						<input type="radio" name="sexo" id="mujer" value="Mujer" ng-model="vm.tercero.sexo">
+						<label for="mujer">Otro</label>
 					</div>
 
 

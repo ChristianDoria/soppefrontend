@@ -1,0 +1,10 @@
+<section ng-controller="sedeListCtrl as sedeCtrl">
+  <div class="container"
+       ng-repeat="sede in sedeCtrl.sedeList">
+       <div class="row">
+         <h2>{{sede.idSedes}}</h2>
+         <span>{{sede.email}}</span>
+       </div>
+
+  </div>
+</section>

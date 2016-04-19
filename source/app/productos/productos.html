@@ -1,0 +1,57 @@
+<div class="contenedor-formulario">
+  <div class="wrap">
+    <div layout="column" ng-cloak>
+         <md-content layout-padding>
+ 			<form action="" class="formulario" name="formulario_registro" method="get">
+
+
+ 				<div>
+          <!-- <md-input-container class="md-block">
+              <label>id Producto</label>
+                <input md-maxlength="40" required md-no-asterisk name="nombre"  ng-model="vm.producto.idProducto">
+                <div ng-messages="formulario_registro.nombre.$error">
+                    <div ng-message="required">Este campo es requerido.</div>
+                      <div ng-message="md-maxlength">El nombre no puede superar 40 caracteres.</div>
+                        </div>
+              </md-input-container> -->
+ 					<md-input-container class="md-block">
+ 												 <label>Nombre Producto</label>
+ 												 <input md-maxlength="40" required md-no-asterisk name="nombre" ng-model="vm.productos.descripcion">
+ 												 <div ng-messages="formulario_registro.nombre.$error">
+ 														 <div ng-message="required">Este campo es requerido.</div>
+ 														 <div ng-message="md-maxlength">El nombre no puede superar 40 caracteres.</div>
+ 												 </div>
+ 					 </md-input-container>
+ 	 					<!-- <md-input-container class="md-block">
+ 	 												 <label>Id Empresa</label>
+ 	 												 <input md-maxlength="40" required md-no-asterisk name="nombre" ng-model="vm.producto.idEmpresa">
+ 	 												 <div ng-messages="formulario_registro.nombre.$error">
+ 	 														 <div ng-message="md-maxlength">El nombre no puede superar 40 caracteres.</div>
+ 	 												 </div>
+ 	 					 </md-input-container>
+ 		 					<md-input-container class="md-block">
+ 		 												 <label>Id Categoria Productos</label>
+ 		 												 <input md-maxlength="40" required md-no-asterisk name="nombre" ng-model="vm.producto.idCategoriaProductos">
+ 		 												 <div ng-messages="formulario_registro.nombre.$error">
+ 		 														 <div ng-message="required">Este campo es requerido.</div>
+ 		 														 <div ng-message="md-maxlength">El nombre no puede superar 40 caracteres.</div>
+ 		 												 </div>
+
+ 		 					 </md-input-container>
+ 							 <md-input-container class="md-block">
+ 										 <label>Id Proveedores</label>
+ 											 <input md-maxlength="40" required md-no-asterisk name="nombre" ng-model="vm.producto.idProveedores">
+ 											 <div ng-messages="formulario_registro.nombre.$error">
+ 													 <div ng-message="required">Este campo es requerido.</div>
+ 														 <div ng-message="md-maxlength">El nombre no puede superar 40 caracteres.</div>
+ 															 </div>
+  									 </md-input-container> -->
+
+ 					<input type="button" id="btn-submit" value="Enviar" ng-click="vm.create()">
+ 				</div>
+      </form>
+      </md-content>
+      </div>
+
+      </div>
+      </div>

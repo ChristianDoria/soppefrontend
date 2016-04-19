@@ -18,7 +18,12 @@
         'app.portafolio',
         'app.productos',
         'app.registro',
-        'app.ecologico'
+        'app.registroEmpresa',
+        'app.registroSede',
+        'app.ecologico',
+        'app.moduloVentas',
+        'app.empresasRegistradas',
+        'app.sedesRegistradas'
 
     ]);
 
